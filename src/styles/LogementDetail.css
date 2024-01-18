@@ -1,0 +1,67 @@
+.listing-details{
+    margin: 0 10%;
+}
+
+.multi-collapse-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0; /* Ajoutez une marge selon vos besoins */
+}
+
+.collapse {
+    flex-basis: calc(50% - 10px); /* Ajustez l'espace entre les composants si nécessaire */
+}
+
+.collapse-wrapper {
+    flex: 1; /* Les conteneurs enfants prennent une part égale de l'espace */
+    margin: 0 10px; /* Espace entre les collapses */
+  }
+
+h1, h4{
+    color: #FF6060;
+    font-weight: 500;
+}
+
+h1{
+    font-size: 36px;
+}
+
+h4{
+    font-size: 18px;
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap; /* Permet aux tags de passer à la ligne suivante si nécessaire */
+    gap: 10px; /* Espacement entre les tags */
+    margin-bottom: 20px; /* Espacement entre les tags et les Collapse */
+}
+
+.tag{
+    padding: 5px 25px;
+    background-color: #FF6060; /* La couleur de fond de votre choix */
+    color: white; /* La couleur de texte de votre choix */
+    border-radius: 25px; /* Arrondi des coins */
+    /* Ajoutez des styles supplémentaires pour les tags ici */
+}
+
+@media (max-width: 768px) { /* Pour les écrans plus petits, ils peuvent s'afficher en colonne */
+    .multi-collapse-container {
+        flex-direction: column;
+      }
+    
+      .collapse-wrapper {
+        margin: 10px 0; /* Ajustez l'espacement vertical sur les écrans plus petits */
+      }
+  
+    .collapse {
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: 20px; /* Ajustez selon l'espace que vous souhaitez entre les composants */
+    }
+  
+    .collapse:last-child {
+      margin-bottom: 0;
+    }
+  }
