@@ -5,7 +5,7 @@ import Collapse from '../components/Collapse';
 function About() {
   return (
     <div className="wrapper">
-      <Banner txtBanner="" classBanner="aboutBanner"/>
+      <Banner classBanner="aboutBanner"/>
 
       <Collapse titleCollapse="Fiabilité" txtCollapse="
       Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.

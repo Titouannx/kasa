@@ -2,19 +2,33 @@
     margin: 0 10%;
 }
 
+.infos-and-host{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: -30px;
+}
+
+.left-column {
+  flex: 3;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 1;
+}
+
 .multi-collapse-container{
     display: flex;
     justify-content: space-between;
-    margin: 20px 0; /* Ajoutez une marge selon vos besoins */
-}
-
-.collapse {
-    flex-basis: calc(50% - 10px); /* Ajustez l'espace entre les composants si nécessaire */
+    margin: 20px 0;
 }
 
 .collapse-wrapper {
-    flex: 1; /* Les conteneurs enfants prennent une part égale de l'espace */
-    margin: 0 10px; /* Espace entre les collapses */
+    flex: 1;
+    margin: 0 10px;
   }
 
 h1, h4{
@@ -32,36 +46,76 @@ h4{
 
 .tags{
     display: flex;
-    flex-wrap: wrap; /* Permet aux tags de passer à la ligne suivante si nécessaire */
-    gap: 10px; /* Espacement entre les tags */
-    margin-bottom: 20px; /* Espacement entre les tags et les Collapse */
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .tag{
     padding: 5px 25px;
-    background-color: #FF6060; /* La couleur de fond de votre choix */
-    color: white; /* La couleur de texte de votre choix */
-    border-radius: 25px; /* Arrondi des coins */
-    /* Ajoutez des styles supplémentaires pour les tags ici */
+    background-color: #FF6060;
+    color: white;
+    border-radius: 25px; 
 }
 
-@media (max-width: 768px) { /* Pour les écrans plus petits, ils peuvent s'afficher en colonne */
+.host-info {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.host-picture {
+  width: 65px;
+  height: 65px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-right: 10px;
+}
+
+.host-name {
+  color: #FF6060;
+  font-size: 18px;
+  line-height: 0px;
+}
+
+@media (max-width: 768px) { 
     .multi-collapse-container {
         flex-direction: column;
       }
     
       .collapse-wrapper {
-        margin: 10px 0; /* Ajustez l'espacement vertical sur les écrans plus petits */
+        margin: 10px 0; 
       }
   
     .collapse {
       flex-basis: 100%;
       margin-right: 0;
       margin-left: 0;
-      margin-bottom: 20px; /* Ajustez selon l'espace que vous souhaitez entre les composants */
+      margin-bottom: 20px; 
     }
   
     .collapse:last-child {
       margin-bottom: 0;
+    }
+
+    .infos-and-host {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .right-column {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin: auto 0px;
+      width: 100%;
+    }
+    
+    .rating{
+      margin: auto 0px;
+    }
+    
+    .host-info{
+      margin: 0px;
     }
   }

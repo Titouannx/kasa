@@ -1,14 +1,9 @@
-import { Link, useLocation } from 'react-router-dom';
+// import { Link, useLocation } from 'react-router-dom';
 import '../styles/Header.css'
 import logo from '../assets/logo.svg'
+import { NavLink } from "react-router-dom";
 
 function Header() {
-
-    const location = useLocation();
-
-    const isActive = (path) => {
-        return location.pathname === path;
-    }
 
     return (
         <header>
@@ -19,10 +14,10 @@ function Header() {
                     <nav>
                         <ul className='nav-list'>
                             <li>
-                                <Link to="/" className={`menu-btn ${isActive('/') ? 'active-page' : ''}`}>Accueil</Link>
+                                <NavLink to="/" className={({ isActive }) => (isActive ? 'menu-btn active-page' : 'menu-btn')}>Accueil</NavLink>
                             </li>
                             <li>
-                                <Link to="/about" className={`menu-btn ${isActive('/about') ? 'active-page' : ''}`}>A propos</Link>
+                                <NavLink to="/about" className={({ isActive }) => (isActive ? 'menu-btn active-page' : 'menu-btn')}>A propos</NavLink>
                             </li>
                         </ul>
                     </nav>
