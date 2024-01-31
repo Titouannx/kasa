@@ -2,9 +2,7 @@ import React from 'react';
 import '../styles/Rating.css';
 
 function Rating({ rating }) {
-  const stars = Array.from({ length: 5 }, (_, index) => {
-    return '★';
-  });
+  const stars = new Array(5).fill('★');
 
   return (
     <div className="rating">
